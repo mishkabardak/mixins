@@ -1,0 +1,272 @@
+@import "./mixin.scss";
+@import "./variables.scss";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    height: 100vh;
+}
+
+.promo {
+    @include flex-row;
+    justify-content: center;
+    height: 2.6rem;
+    background-color: $bg-color;
+    color: $font-color-other;
+    font-family: $font-family-title;
+    font-size: $font-size-nav;
+    letter-spacing: $font-letter-spacing;
+    
+    &-text {
+        width: 90%;
+        @include flex-row;
+        justify-content: center;
+    }
+    
+    &-link {
+        margin-left: .2rem;
+        color: #fff;
+    }
+
+    i {
+        cursor: pointer;
+    }
+}
+
+.header {
+    @include flex-row;
+    justify-content: space-between;
+    height: 5rem;
+    padding: 0rem $padding-m;
+    letter-spacing: $font-letter-spacing;
+        
+        &__nav {
+            width: 80%;
+            
+            &-menu {
+                @include flex-row;
+                justify-content: space-around;
+                padding: 0rem $padding-xl;
+            }
+        }
+        
+        &__reg {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            
+            i {
+                margin: 0rem $margin-s;
+                color: $font-color-nav;
+            }
+        }
+
+        .menu-link {
+            font-family: $font-family-title;
+            font-size: $font-size-nav;
+            font-weight: 600;
+            color: $font-color-nav;
+            text-decoration: none;
+            transition: color ease-in-out;
+
+            &:hover {
+                color: $font-color-title;
+            }
+        }
+}
+
+.brand__logo {
+    width: 10%;
+    @include flex-column;
+    font-family: $font-family-title;
+    font-size: $font-size-title;
+    color: $font-color-title;
+}
+
+.brand__name {
+    margin: 0rem;
+    font-weight: 600;
+}
+
+.brand__text {
+    font-size: $font-size-other;
+    font-family: $font-family-content;
+}
+
+.banner {
+    height: 38rem;
+    background-image: url(https://dommino.ua/media/wysiwyg/blog/terrasy-i-verandy-podbiraem-mebel/7.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    font-family: $font-family-content;
+    font-size: $font-size-content;
+    color: $font-color-other;
+    padding-left: $padding-s;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: $margin-xl;
+    padding: 0rem $padding-m;
+}
+
+.collection__discription {
+    width: 20%;
+    font-family: $font-family-content;
+    font-size: $font-size-content;
+    color: $font-color-content;
+    margin-right: $margin-l;
+    
+    &-title {
+        margin-bottom: $margin-s;
+        font-size: $font-size-title;
+        font-family: $font-family-title;
+        letter-spacing: $font-letter-spacing;
+    }
+}
+
+.product-wrapper {
+    width: 80%;
+    font-family: $font-family-content;
+    font-size: $font-size-content;
+    color: $font-color-content;
+    
+    
+    .product-box {
+        @include flex-row;
+        flex-wrap: wrap;
+        margin-bottom: $margin-l;
+    }
+    
+    
+    .product {
+        width: 30%;
+        padding: $padding-xs;
+        
+        &__img {
+            width: 100%;
+        }
+        
+        &__discription {
+            height: 2.5rem;
+            @include flex-column;
+            justify-content: space-between;
+               font-size: $font-size-content;
+        }
+        
+        &__release {
+            color: $font-color-title;
+            font-size: $font-size-nav;
+            font-weight: 600;
+        }
+    }
+}
+
+.container__catalog {
+    @include flex-column;
+    justify-content: center;
+    height: 20rem;
+    background-color: $bg-color;
+    color: $font-color-other;
+
+    .catalog__date {
+        font-size: $font-size-content;
+    }
+
+    .catalog__title {
+        font-size: $font-size-biggest;
+        font-family: $font-family-title;
+        letter-spacing: $font-letter-spacing;
+    }
+
+    .catalog__btn {
+        @include brown-btn;
+    }
+    
+}
+
+
+.brand-box {
+    @include flex-row;
+    justify-content: space-between;
+    padding: $padding-l $padding-xl;
+
+    .brand__discription {
+        @include flex-column;
+        width: 30%;
+    }
+
+    .brand__logo {
+        width: 100%;
+    }
+
+    .brand__history {
+        font-family: $font-family-content;
+        font-size: $font-size-nav;
+        color: $font-color-nav;
+        margin-top: $margin-m;
+        width: 85%;
+    }
+
+    .brand__btn-wrapper {
+        width: 70%;
+        height: 100%;
+        @include flex-row;
+        justify-content: end;
+        align-items: flex-start;
+
+        .brand__btn {
+           @include white-btn;
+        }
+    }
+}
+
+
+.footer {
+    @include flex-row;
+    justify-content: space-between;
+    height: 5rem;
+    padding: 0rem $padding-xl;
+
+    &__nav-wrapper {
+        @include flex-row;
+        justify-content: space-evenly;
+        font-size: $font-size-nav;
+        font-family: $font-family-content;
+        color: $font-color-content;
+        width: 60%;
+        
+    }
+
+    &__nav {
+        @include flex-row;
+        justify-content: space-between;
+        width: 45%;
+        
+        a {
+            text-decoration: none;
+            color: $font-color-content;
+        }
+    }
+
+    &__media {
+        @include flex-row;
+        justify-content: space-between;
+        width: 20%;
+        color: $font-color-title;
+        cursor: pointer;
+    }    
+}

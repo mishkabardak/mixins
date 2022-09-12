@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Badonimoda";
+    src: url(/fonts/BadoniModa/BodoniModa-VariableFont_opsz,wght.ttf);
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url(/fonts/Helvetica/helvetica_regular.otf);
+}
+
+
+//FONT STYLES
+$font-family-title : "Badonimoda";
+$font-family-content : "Helvetica";
+$font-size-title : 1.4rem;
+$font-size-nav : .8rem;
+$font-size-content : 1rem;
+$font-size-other : .5rem;
+$font-size-biggest : 2rem;
+$font-color-title : #8A6D4B;
+$font-color-content: #b1b1b1;;
+$font-color-nav: #666666;
+$font-color-other : #fff;
+$font-letter-spacing : .1rem;
+
+//BG-COLOR
+$bg-color : #8A6D4B;
+
+//MARGIN
+$margin-xs : .5rem;
+$margin-s : 1rem;
+$margin-m : 2rem;
+$margin-l : 3rem;
+$margin-xl : 5rem;
+
+//PADDING
+$padding-xs : .5rem;
+$padding-s : 1rem;
+$padding-m : 2rem;
+$padding-l : 3rem;
+$padding-xl : 5rem;
